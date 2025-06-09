@@ -1,0 +1,14 @@
+{
+  "name": "SX127x LoRa Component",
+  "version": "1.0.0",
+  "dependencies": ["spi"],
+  "requirements": [],
+  "files": [
+    "components/sx127x/__init__.py",
+    "components/sx127x/sx127x.cpp",
+    "components/sx127x/sx127x.h",
+    "components/sx127x/config.yaml"
+  ],
+  "codeowners": ["@Barbariyo"],
+  "documentation": "https://github.com/Barbariyo/esphome-lora-component"
+}
