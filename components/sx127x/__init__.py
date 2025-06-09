@@ -19,6 +19,7 @@ CONFIG_SCHEMA = cv.Schema({
     cv.Optional("sync_word", default=0x12): cv.hex_uint8_t,
 }).extend(cv.COMPONENT_SCHEMA).extend(spi.spi_device_schema())
 
+
 async def to_code(config):
     var = cg.new_Pvariable(config[CONF_ID])
     await cg.register_component(var, config)
