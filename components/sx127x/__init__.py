@@ -11,9 +11,9 @@ SX127xComponent = sx127x_ns.class_("SX127xComponent", cg.Component, spi.SPIDevic
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(SX127xComponent),
-    cv.Required("cs_pin"): cv.pin,
-    cv.Required("reset_pin"): cv.pin,
-    cv.Required("dio0_pin"): cv.pin,
+    cv.Required("cs_pin"): cv.Schema(cv.int_),
+    cv.Required("reset_pin"): cv.Schema(cv.int_),
+    cv.Required("dio0_pin"): cv.Schema(cv.int_),
     cv.Required("frequency"): cv.frequency,
     cv.Optional("tx_power", default=20): cv.int_range(2, 20),
     cv.Optional("sync_word", default=0x12): cv.hex_uint8_t,
